@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  border-radius: 15px;
+  color: darkgreen;
+}
+
+body {
+  background: #008f8c;
+}
+
+header {
+  border: solid 3px #066839;
+  padding: 1em;
+  border-radius: 20px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 15em 1fr 1fr;
+}
+
+.divInput {
+  display: grid;
+  grid-template-columns: 4em;
+  grid-template-rows: 1.2em 2em;
+  margin-top: 3em;
+}
+
+.divInput > div {
+  display: grid;
+  grid-template-columns: 10em auto;
+}
+
+.divUlImg {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.divUlImg ul {
+  display: grid;
+  grid-template-areas: "uno uno uno uno";
+  gap: 0.2em;
+}
+
+li {
+  grid-area: uno uno uno uno;
+  border: solid;
+  padding: 0.2em;
+}
+
+/*  */
+
+li {
+  list-style: none;
+}
+
+label {
+  background: #642e62;
+  color: yellow;
+  border-radius: 0px;
+}
+
+input {
+  text-align: center;
+  border: none;
+  /* outline: transparent; */
+  margin-right: 1em;
+  margin-top: 0.2em;
+}
+
+input:hover {
+  border: solid 1px;
+}
+
+input:focus {
+  border: solid 2px;
+}
+
+button {
+  border: solid 1px;
+  padding: 0.7em;
+  background: lightblue;
+  color: yellow;
+}
+
+button:active {
+  border: solid 3px;
+  font-size: 75%;
+}
+
+.img1 {
+  width: 8em;
+  margin-top: 2em;
+}
+
+.img2 {
+  height: 6em;
+}
+
+/*  */
+
+section {
+  display: grid;
+  margin: 0 auto;
+  width: 95%;
+
+  grid-template-rows: auto auto auto;
+  gap: 1em;
+  grid-template-areas:
+    "primero"
+    "segundo"
+    "tercero";
+}
+
+.divUpBigger {
+  grid-area: primero;
+  border: dashed 2px #d34196;
+  margin: 0 auto;
+  height: 18em;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 1em;
+  margin-top: 1em;
+  width: 85%;
+}
+
+.divUp1 {
+  border: dashed 2px orange;
+  padding: 1em;
+  grid-column: 1 / 4;
+}
+
+.divUp2 {
+  border: solid 2px red;
+  padding: 1em;
+  grid-column: 4 / 5;
+}
+
+.divUp3 {
+  border: solid 2px red;
+  padding: 1em;
+  grid-column: 1 / 2;
+}
+
+.divUp4 {
+  border: dashed 2px orange;
+  padding: 1em;
+  grid-column: 2 / 5;
+}
+
+.divDownBigger {
+  grid-area: segundo;
+  border: dashed 2px #001858;
+  height: 28em;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+  width: 100%;
+}
+
+.divInsideDown1 div:nth-child(odd) {
+  border: solid goldenrod;
+}
+
+.divInsideDown1 div:nth-child(even) {
+  border: solid skyblue;
+}
+
+.divInsideDown1 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.divDown1 {
+  border: dashed 2px #001858;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+.divDown2 {
+  border: dashed 2px #001858;
+  padding: 1em;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+}
+
+.divDown3 {
+  border: dashed 2px #001858;
+  grid-column: 3 / 4;
+  grid-row: 1 / -1;
+}
+
+.divDown4 {
+  border: dashed 2px #001858;
+  padding: 1em;
+  grid-column: 4 / 5;
+  grid-row: 1 / -1;
+}
+
+.divInsideDown2 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+}
+
+.divDown5 {
+  border: solid 2px #001858;
+  padding: 1em;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.divDown6 {
+  border: solid 2px blue;
+  padding: 1em;
+  grid-row: 2 / 5;
+  grid-columns: 1 / 2;
+}
+
+.divDown7 {
+  border: solid 2px red;
+  padding: 1em;
+  grid-row: 2 / 5;
+  grid-columns: 2 / 3;
+}
+
+footer {
+  grid-area: tercero;
+  border: solid;
+  width: 100%;
+  height: 15em;
+  border-radius: 0px;
+  gap: 1em;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+footer > div {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; */
+  grid-auto-flow: column;
+  justify-items: center;
+}
+
+footer > div > div {
+  border: solid 3px #c29ea0;
+  border-radius: 100%;
+  height: 12em;
+  width: 12em;
+  max-height: 15em;
+  max-width: 15em;
+}
+
+.insideFooter2 {
+  height: 6em;
+  width: 6em;
+  margin-top: 1em;
+  max-height: 6em;
+  max-width: 6em;
+  border: solid red;
+}
+
+@media screen and (min-width: 80em) {
+  .img2 {
+    margin-left: 3em;
+    width: 33em;
+  }
+}
